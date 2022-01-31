@@ -1,0 +1,12 @@
+extends layouts/main-layout
+block flash 
+    if (success && success.length )
+        .alert.alert-success.alert-dismissible.fade.show(role='alert')
+            #{success}
+            button.close(type='button' data-dismiss='alert' aria-label='Close')
+                span(aria-hidden='true') &times;
+    if (error && error.length)
+        .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+            #{error}
+            button.close(type='button' data-dismiss='alert' aria-label='Close')
+                span(aria-hidden='true') &times;

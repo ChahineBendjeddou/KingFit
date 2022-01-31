@@ -1,0 +1,60 @@
+footer.footer#contact
+    .container
+        .row
+            .footer-col
+                .row
+                    h4 company
+                    ul
+                        li
+                            a(href='#contact') about us
+                        li
+                            a(href='#services') our services
+                        li
+                            a(href='#contact') privacy policy
+                        li
+                            a(href='#plans') Plans
+                .row.mt-5.mb-5
+                    h4 follow us
+                    .social-links
+                        a(href='#')
+                            ion-icon(name='logo-facebook')
+                        a(href='#')
+                            ion-icon(name="logo-twitter")
+                        a(href='#')
+                            ion-icon(name="logo-instagram")
+                        a(href='#')
+                            ion-icon(name="logo-linkedin")
+            .footer-col
+                h4 get help
+                ul
+                    li
+                        a(href='#contact') FAQ
+                    li
+                        a(href='#contact') shipping
+                    li
+                        a(href='#contact') returns
+                    li
+                        a(href='#contact') order status
+                    li
+                        a(href='#contact') payment options
+            .footer-col
+                h4(href='#shop') online shop
+                ul
+                    li
+                        a(href='#shop') T-shirt
+                    li
+                        a(href='#shop') hoodies
+                    li
+                        a(href='#shop') bags
+                    li
+                        a(href='#shop') bottles
+            .footer-col.col-12
+                .row
+                    h4 Contact us
+                    .form(action='/contactus' method='post') 
+                        input#emailcontact.mb-2(type='email' placeholder='Email'  name='emailcontact')
+                        textarea#textareacontact(name="", cols="30", rows="3" , placeholder="Your message...")
+                        button#btncontact send
+                        span#msgcontact
+            h7  Copyright KingFit 2022 , All rights reserved.    
+        

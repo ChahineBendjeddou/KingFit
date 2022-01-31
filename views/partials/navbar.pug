@@ -1,0 +1,25 @@
+nav.container-fluid.navbar.navbar-expand-lg.navbar-dark.fixed-top#navbar_top
+        a.navbar-brand(href='/') 
+            img(src='images/king-fit-b.png')
+        button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"   aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+        .collapse.navbar-collapse.row#navbarNav
+            .navbar-nav.col-9
+                a.nav-link(href='/' text-color="white" ) Home 
+                a.nav-link(href='#services') Services
+                a.nav-link(href='#plans') Plans
+                a.nav-link(href='#blog') Blog
+                a.nav-link(href='#shop') Shop
+                a.nav-link(href='#contact') Contact
+                
+            .navbar-nav.col.justify-content-end
+                if (!currentUser) 
+                    a.nav-link(href='#' type="button" data-bs-toggle="modal" data-bs-target="#loginregistermodel" ) Sign in
+                    //- button.btn.nav-link(type="button" data-bs-toggle="modal" data-bs-target="#loginregistermodel") Sign in 
+                    button.btn.nav-link(type="button" data-bs-toggle="modal" data-bs-target="#loginregistermodel") Register 
+                else  
+                    p.mt-1 #{currentUser.username}
+                    a.nav-link(href="/logout")  Logout 
+
+
+            

@@ -1,0 +1,500 @@
+/* Variables */
+:root{
+    --primary-color : #121212;
+    --secondary-color : #F9B233;
+    --button-color : #db9214;
+    --off-white : #E5E5E5;
+
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+    text-rendering: optimizeLegibility;
+}
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    background-color: var(--off-white)
+}
+.main{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .7)),url("../images/gym2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color : var(--secondary-color);
+}
+
+.img{
+    height: 80vh;
+}
+img{
+    height : 100%;
+    width :100%;
+}
+@media (max-width: 768px) {
+    .img.col-md-5{
+        display: none;
+    }
+    .text.col-md-7.align-self-center{
+        text-align: center;
+        margin: auto;
+        width: 50%;  
+        margin-top: 100px;
+        
+    }
+    .text.col-md-7.align-self-center .slogon{
+        font-weight: 400 ;
+        font-size:2.15rem;
+        line-height : 1.45;
+    }
+  }
+
+.slogon{
+    text-align: center;
+    text-transform: uppercase;
+    color : white;
+    font-weight: 500 ;
+    font-size: 2.8rem;
+    line-height : 1.45;
+    
+    
+}
+
+
+.modal-content{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.navbar-nav.col.justify-content-end p {
+    color : rgba(255, 255, 255, 0.2) !important;
+}
+.text.align-self-center{
+    text-shadow: 4px  3px  rgba(250, 250, 250, 0.1);
+    margin : auto !important;
+    
+}
+.text.container-xxl{
+    display : flex;
+    flex-direction : column;
+    height : 65vh !important;
+    width : 100% !important;
+  
+}
+
+.join-us{
+    width : 22% !important;
+    padding: auto;
+    position : relative;
+   
+    color : var(--button-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    z-index: 1;
+    border : var(--button-color) solid thin !important;
+    transition : color 300ms ease-in-out;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+}
+.join-us:hover{
+    color : white !important;
+    
+}
+
+.join-us::before{
+    content: " ";
+    position : absolute;
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right:0;
+    z-index: -1;
+    background-color: var(--button-color);
+    transition: transform 300ms ease-in-out;
+    transform : scaleX(0);
+    transform-origin: left;
+}
+.join-us:hover::before,
+.join-us:focus::before{
+    transform : scaleX(1);
+}
+/* services */
+#services{
+    margin-top: 13rem ;
+}
+.area{
+    display : flex;
+}
+.area .text {
+    margin : auto;
+    text-align: center;
+}
+.area .text h2 {
+    padding : 0.2rem  0.5rem !important;
+    color : white;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.274);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    
+}
+.services .row {
+    margin-top : 4rem;
+}
+.service1{
+    color : var(--primary-color);
+}
+.left-side.col-7 h3{
+    border-bottom: var(--button-color ) 2px solid;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding : .5rem;
+    width : fit-content;
+    font-weight: 700;
+}
+.services h1{
+    font-weight: 700;
+    font-size: 4rem;
+    /* color : var(--secondary-color); */
+}
+.services p {
+    font-weight: 400;
+    font-size: .8rem;
+}
+.left-side{
+    padding-left: 5rem;
+}
+.service2 .right-side{
+    padding-left: 5rem;
+}
+.service2 .left-side,
+.service2 .right-side {
+    margin : 5rem 0;
+}
+.service2{
+    color : var(--off-white);
+    background-color: var(--primary-color);
+}
+.services img{
+    width: 30rem;
+    height: 20rem;
+}
+/* separate */
+.separate{
+    width: 100%;
+    height: 20rem;
+    background-image:url('../images/gym.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+/* plans */
+#plans{
+    position: relative;
+}
+#plans h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+#plans::before{
+    content: "plans";
+    position : absolute;
+    padding : 0.2rem 0.5rem;
+    top : -1.5rem;
+    left : calc(50% - 2rem);
+    
+    font-weight: 500;
+    font-size:2rem;
+    color : var(--off-white); 
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.274);
+}
+#plans p {
+    margin-top: 2rem;
+}
+.card-basic.col-4{
+    margin-bottom : 10rem;
+}
+.card-basic.col-4 .col-12{
+    width: 80%;
+    margin-left: 2rem;
+    background-color: var(--off-white);
+    color: var(--primary-color);
+    padding : 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 2px 1px rgba(77, 75, 75, 0.781);
+}
+.card-basic.col-4 .col-12 p{
+    opacity: .8;
+    margin-bottom : 2rem;
+}
+.card-basic.col-4 .col-12 h4{
+    margin-top: .8rem;
+    margin-bottom : 2.8rem;
+    font-size: 1.3rem;
+}
+.card-basic.col-4 .col-12 span{
+    font-weight: 300;
+    font-size: 1rem;
+    margin-left : 1rem;
+}
+.card-basic.col-4:nth-child(2) .col-12{
+    background-color: var(--button-color);
+    color : var(--off-white);
+
+}
+.card-basic.col-4 .col-12 .button{
+    display : flex;
+    margin-top: 3rem;
+    
+}
+.card-basic.col-4 .col-12 .button button{
+    margin : auto;
+    padding: .5rem 2.5rem  ; 
+    background-color: var(--secondary-color);
+    color : var(--off-white);
+    border-radius: 20px;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.336); 
+    transition: padding  250ms ease-in-out , font-weight 250ms ease-in-out;
+   
+}
+.card-basic.col-4 .col-12 .button button:hover{
+    padding : .5rem 3.5rem;
+    font-weight: 500;
+    
+}
+.off{
+    opacity : 0.4;
+}
+.card-basic.col-4:nth-child(2) .col-12 .button button{
+    background-color: var(--primary-color);
+}
+.card-basic.col-4 .col-12 ul li::before{
+    content: '';
+    border : solid var(--button-color);
+    border-width : 0 2px 2px 0;
+    display: inline-block;
+    padding : 3px;
+    transform : rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: -1rem;
+    position : absolute;
+    left : -.5rem;
+    top : .4rem;
+}
+.card-basic.col-4:nth-child(2) .col-12 ul li::before{
+    border-color: var(--primary-color);
+}
+.card-basic.col-4 .col-12 ul li{
+    list-style:  none;
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: .9rem;
+
+}
+
+/* shop */
+.shop{
+    padding : 20px;
+    width : 100vw;
+    background-color: var(--off-white);
+    text-align: center;
+    color : var(--primary-color);
+    position: relative;
+}
+.shop h1{
+    margin-bottom: 5rem;
+}
+.shop::before{
+    content: "Shop";
+    position : absolute;
+    padding : 0.2rem 0.5rem;
+    top : -1.5rem;
+    left : calc(50% - 2rem);
+    
+    font-weight: 500;
+    font-size:2rem;
+    color : var(--off-white); 
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.274);
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.box {
+  position: relative;
+  box-shadow: 1px 4px 4px rgb(0, 0, 0, 0.1);
+  border-radius: 44px 4px 4px 4px;
+}
+.box .box-img {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 44px 4px 0 0;
+}
+.box .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.box .box-img img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.title-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+.title-price h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.box span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-left: 12px;
+  color: var(--primary-color);
+}
+
+.stars ion-icon{
+    color: var(--secondary-color);
+}
+.box .cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 7px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 4px 0 4px 0;
+    background: var(--primary-color);
+}
+
+.box .cart:hover{
+    background : var(--secondary-color);
+}
+
+/* footer */
+
+/* footer{
+    text-align: center;
+} */
+.footer .row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer ul{
+	list-style: none;
+}
+.footer{
+	background-color: var(--primary-color);
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: var(--off-white);
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: var(--secondary-color);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: var(--off-white);
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: var(--off-white);
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	 height: 40px;
+	width: 40px;
+	/*background-color: rgba(255,255,255,0.2); */
+	margin: 10px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: var(--off-white);
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: var(--off-white);
+}
+.footer-col .social-links a ion-icon{
+    width: 40px;
+    height: 40px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.footer-col.col-12 button{
+    width: 5rem;
+    height: 2.2rem;
+    color : var(--off-white);
+    background-color: var(--button-color);
+    border-radius: 20px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    
+}
+h7{
+    text-align: center;
+    border : solid var(--off-white);
+    border-width : 2px 0 0 0;
+    padding-top: .75rem;
+}
+#msgcontact{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--off-white);
+    margin-left: 2rem;
+}

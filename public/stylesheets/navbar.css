@@ -1,0 +1,83 @@
+nav{
+    /* margin-bottom: 10px; */
+    height: 4.25rem; 
+    /* width: 100%;  */
+}
+a.navbar-brand {
+    height:80px;
+    width: 100px;
+    margin-right: 4rem;
+    /* bottom : 100px; */
+}
+.nav-link {
+    padding: 0.25rem 0;
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+    color: rgba(255, 255, 255, 0.6) !important;
+    border-width: thin ;
+}
+
+
+.nav-link:hover{
+    border-bottom-color:rgba(255, 255, 255, 0.4) !important;
+    color : white !important;
+    
+}
+
+
+
+button.btn.nav-link{
+    width : 7.5rem;
+    color: var(--secondary-color) !important;
+    border: var(--secondary-color) solid thin !important;
+    /* border-radius : 10px; */
+    z-index: 1;
+    position: relative;
+    padding: 5px 8px  !important;
+    transition: color 300ms ease-in-out;
+
+}
+button.btn.nav-link:hover{
+    color : white !important;
+
+}
+
+button.btn.nav-link::before{
+    content: " ";
+    position : absolute;
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right:0;
+    z-index: -1;
+    background-color: var(--button-color);
+    transition: transform 300ms ease-in-out;
+    transform : scaleX(0);
+    transform-origin: left;
+}
+button.btn.nav-link:hover::before,
+button.btn.nav-link:focus::before{
+    transform : scaleX(1);
+}
+.navbar-static-top {
+    transition: top .3s ease;
+    -webkit-transition: top .3s ease;
+    -moz-transition: top .3s ease;
+    -o-transition: top .3s ease;
+    -ms-transition: top .3s ease;
+    top: -5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.navbar-fixed-top{
+    opacity: 0.95;
+    transition: top .3s ease;
+    -webkit-transition: top .3s ease;
+    -moz-transition: top .3s ease;
+    -o-transition: top .3s ease;
+    -ms-transition: top .3s ease;
+    top: 0;
+    border-bottom: white solid thin ;
+    background-color: rgba(0, 0, 0, .9);
+    
+}
